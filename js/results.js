@@ -21,3 +21,4 @@ function searchListener(html = '') {
     }
 }
 export { searchListener };
+searchListener();
