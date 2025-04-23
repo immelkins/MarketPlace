@@ -36,7 +36,7 @@ const createBookCard = (item) => {
        src="${item.image_url[0]}"
        alt="${item.title}"
        class="book-img"
-       onerror="this.onerror=null; this.src='./images/not_found.gif';"
+       onerror="this.onerror=null; this.src='./images/placeholder.png';"
      />
      <div class="book-info">
        <h4 class="book-title">${item.title}</h4>
