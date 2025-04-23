@@ -7,7 +7,7 @@
   <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' rel='stylesheet'
     integrity='sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3' crossorigin='anonymous'>
   <link rel='stylesheet' href='../css/navigation.css'>
-  <link rel='stylesheet' href='../index.css'>
+  <link rel='stylesheet' href='../css/shoppingcart.css'>
   <title>Shopping Cart</title>
 </head>
 
@@ -38,7 +38,65 @@
     </div>
   </header>
 
-  this is my shopping cart
+  <div class="shoppingcart-container">
+    <main class="cart-main">
+      <div class="cart-left-space"></div>
+      
+      <div class="cart-content">
+        <div class="cart-header">
+          <h1>Your Shopping Cart</h1>
+          <div class="cart-subheader">
+            <span class="item-count">0 items</span>
+            <a href="#" class="deselect-all">Deselect all items</a>
+          </div>
+        </div>
+
+        <div class="cart-items">
+
+          <div class="empty-cart-message">
+            <div class="empty-cart-icon">🛒</div>
+            <h3>Your cart is empty</h3>
+            <p>Browse our marketplace to find supplies</p>
+            <a href="./market.html" class="browse-btn homepage-container">Browse Marketplace</a>
+          </div>
+
+        </div>
+
+        <div class="cart-subtotal">
+          <span>Subtotal (<span class="subtotal-count">0</span> items):</span>
+          <span class="subtotal-price">$0.00</span>
+        </div>
+      </div>
+
+      <div class="order-summary">
+        <div class="summary-card">
+          <h2>Order Summary</h2>
+          <div class="summary-row">
+            <span>Items (<span class="summary-count">0</span>):</span>
+            <span class="summary-items-price">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping:</span>
+            <span class="summary-shipping">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Tax:</span>
+            <span class="summary-tax">$0.00</span>
+          </div>
+          <div class="summary-row total">
+            <span>Order Total:</span>
+            <span class="summary-total">$0.00</span>
+          </div>
+          <button class="checkout-btn" disabled>Proceed to Checkout</button>
+          <div class="payment-methods">
+            <img src="../images/visa-icon.png" alt="Visa">
+            <img src="../images/mastercard-icon.png" alt="Mastercard">
+            <img src="../images/paypal-icon.png" alt="PayPal">
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
 
   <script type='module' src='../js/shoppingcart.js'></script>
   <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js'
