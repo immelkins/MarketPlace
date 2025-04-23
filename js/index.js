@@ -4,7 +4,7 @@ searchListener("html/");
 
 async function loadHomepage() {
   try {
-    const response = await fetch("../html/homepage.html");
+    const response = await fetch("./html/homepage.html");
     const html = await response.text();
     document.getElementById("content").innerHTML = html;
 
