@@ -36,7 +36,7 @@ const createBookCard = (item) => {
        src="${item.image_url[0]}"
        alt="${item.title}"
        class="book-img"
-       onerror="this.onerror=null; this.src='../images/not_found.gif';"
+       onerror="this.onerror=null; this.src='./images/not_found.gif';"
      />
      <div class="book-info">
        <h4 class="book-title">${item.title}</h4>
@@ -71,7 +71,7 @@ const showItemDetails = (id) => {
 
   contentContainer.innerHTML = "";
 
-  const imageSrc = item.image_url?.[0] || "../image/placeholder.png";
+  const imageSrc = item.image_url?.[0] || "./image/placeholder.png";
   contentContainer.innerHTML = `
     <div class="details-card">
       <div class="details-image">
