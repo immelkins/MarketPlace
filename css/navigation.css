@@ -1,462 +1,461 @@
 :root {
-    --primary-color: #8c52ff;
-    --hover-primary: #7a42eb;
-    --light-bg: #e0e0e0;
-    --card-bg: #ffffff;
-    --text-dark: #333333;
-    --text-light: #f0f0f0;
-    --border-color: #dddddd;
-    --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.05);
-    --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
-    --transition-fast: 0.2s ease;
-    --transition-medium: 0.3s ease;
-    --border-radius-sm: 4px;
-    --border-radius-md: 8px;
-  }
-  
-  .app-header {
-    background-color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    padding: 12px 20px;
-    box-shadow: var(--shadow-medium);
-    position: relative;
-    width: 100%;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  .brand-logo {
-    width: 30px;
-    height: 30px;
-    background-color: var(--card-bg);
-    border-radius: var(--border-radius-sm);
-    position: absolute;
-    left: 20px;
-    transition: transform var(--transition-fast);
-    cursor: pointer;
-  }
-  
-  .brand-logo:hover {
-    transform: scale(1.1);
-  }
-  
+  --primary-color: #8c52ff;
+  --hover-primary: #7a42eb;
+  --light-bg: #e0e0e0;
+  --card-bg: #ffffff;
+  --text-dark: #333333;
+  --text-light: #f0f0f0;
+  --border-color: #dddddd;
+  --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+}
+
+.app-header {
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  box-shadow: var(--shadow-medium);
+  position: relative;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.brand-logo {
+  width: 30px;
+  height: 30px;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius-sm);
+  position: absolute;
+  left: 20px;
+  transition: transform var(--transition-fast);
+  cursor: pointer;
+}
+
+.brand-logo:hover {
+  transform: scale(1.1);
+}
+
+.search-box {
+  display: flex;
+  flex: 0 1 700px;
+  max-width: 60%;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-light);
+  margin: 0 auto;
+  transition: box-shadow var(--transition-fast);
+}
+
+.search-box:focus-within {
+  box-shadow: var(--shadow-medium);
+}
+
+.search-filter {
+  background-color: var(--text-light);
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.search-filter:hover {
+  background-color: #e5e5e5;
+}
+
+.caret {
+  font-size: 10px;
+  margin-left: 5px;
+  transition: transform var(--transition-fast);
+}
+
+.search-filter:hover .caret {
+  transform: translateY(2px);
+}
+
+.search-field {
+  flex: 1;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  outline: none;
+}
+
+#search-bar {
+  flex: 1;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  outline: none;
+  min-width: 0;
+}
+
+#search-btn {
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  flex-shrink: 0;
+  width: 40px;
+}
+
+#search-btn:hover {
+  background-color: var(--hover-primary);
+}
+
+#search-btn .cart-button {
+  margin-right: 0;
+  padding: 8px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+#search-btn img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+}
+
+.nav-btn {
+  cursor: pointer;
+}
+
+.market-button {
+  background-color: var(--text-light);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 8px 16px;
+  margin-right: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.market-button:hover {
+  background-color: #e5e5e5;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-light);
+}
+
+.market-button:active {
+  transform: translateY(0);
+}
+
+.cart-button {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  transition: transform var(--transition-fast);
+}
+
+.cart-button img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: transform var(--transition-fast);
+}
+
+.cart-button:hover img {
+  transform: scale(1.15);
+}
+
+.account-button {
+  display: flex;
+  align-items: center;
+}
+
+.account-icon {
+  width: 30px;
+  height: 30px;
+  background-color: var(--card-bg);
+  border-radius: 50%;
+  transition: transform var(--transition-medium),
+    box-shadow var(--transition-medium);
+}
+
+.account-button:hover .account-icon {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
+
+@media (max-width: 1200px) {
   .search-box {
-    display: flex;
-    flex: 0 1 700px;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  .app-header {
+    padding: 12px 60px;
+  }
+
+  .search-box {
+    flex: 0 1 550px;
     max-width: 60%;
-    border-radius: var(--border-radius-sm);
-    overflow: hidden;
-    box-shadow: var(--shadow-light);
-    margin: 0 auto;
-    transition: box-shadow var(--transition-fast);
   }
-  
-  .search-box:focus-within {
-    box-shadow: var(--shadow-medium);
+
+  .nav-actions {
+    right: 15px;
   }
-  
-  .search-filter {
-    background-color: var(--text-light);
-    border: none;
-    padding: 8px 15px;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text-dark);
-    border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm);
-    cursor: pointer;
+
+  .market-button {
+    margin-right: 15px;
+  }
+
+  .cart-button {
+    margin-right: 15px;
+  }
+}
+
+@media (max-width: 850px) {
+  .app-header {
+    padding: 12px 15px;
+  }
+
+  .search-box {
+    max-width: 50%;
+  }
+
+  .brand-logo {
+    left: 15px;
+  }
+
+  .nav-actions {
+    right: 15px;
+  }
+
+  .market-button {
+    margin-right: 10px;
+    padding: 8px 12px;
+  }
+
+  .cart-button {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    flex-direction: column;
+    padding: 12px 15px;
+    gap: 10px;
+  }
+
+  .app-header::before {
+    content: "";
     display: flex;
-    align-items: center;
-    transition: background-color var(--transition-fast);
-    white-space: nowrap;
-  }
-  
-  .search-filter:hover {
-    background-color: #e5e5e5;
-  }
-  
-  .caret {
-    font-size: 10px;
-    margin-left: 5px;
-    transition: transform var(--transition-fast);
-  }
-  
-  .search-filter:hover .caret {
-    transform: translateY(2px);
-  }
-  
-  .search-field {
-    flex: 1;
-    border: none;
-    padding: 8px 15px;
-    font-size: 14px;
-    outline: none;
-  }
-  
-  #search-bar {
-    flex: 1;
-    border: none;
-    padding: 8px 15px;
-    font-size: 14px;
-    outline: none;
-    min-width: 0;
-  }
-  
-  #search-btn {
-    background-color: var(--primary-color);
-    border: none;
-    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: background-color var(--transition-fast);
-    flex-shrink: 0;
-    width: 40px;
-  }
-  
-  #search-btn:hover {
-    background-color: var(--hover-primary);
-  }
-  
-  #search-btn .cart-button {
-    margin-right: 0;
-    padding: 8px;
-    background-color: transparent;
-    display: flex;
-    justify-content: center;
     width: 100%;
+    justify-content: space-between;
+    align-items: center;
   }
-  
-  #search-btn img {
+
+  .brand-logo {
+    position: static;
+    margin: 0;
+  }
+
+  .nav-actions {
+    position: static;
+    margin: 0;
+    padding: 0;
+    width: auto;
+  }
+
+  .app-header > .brand-logo,
+  .app-header > .nav-actions {
+    align-self: auto;
+    margin-bottom: 0;
+  }
+
+  .app-header {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto 1fr;
+  }
+
+  .brand-logo {
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: start;
+  }
+
+  .nav-actions {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: end;
+  }
+
+  .search-box {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 10px 0 0 0;
+  }
+
+  .market-button,
+  .cart-button {
+    margin-right: 15px;
+  }
+
+  .account-button {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .search-filter {
+    padding: 8px 10px;
+    font-size: 13px;
+    min-width: 80px;
+    height: 36px;
+  }
+
+  #search-bar {
+    padding: 8px 10px;
+    font-size: 13px;
+    height: 36px;
+  }
+
+  .market-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .cart-button img {
     width: 20px;
     height: 20px;
-    filter: brightness(0) invert(1);
-    display: block;
-    margin: 0 auto;
   }
-  
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    right: 20px;
-  }
-  
-  .nav-btn {
-    cursor: pointer;
-  }
-  
-  .market-button {
-    background-color: var(--text-light);
-    border: none;
-    border-radius: var(--border-radius-sm);
-    padding: 8px 16px;
-    margin-right: 20px;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text-dark);
-    cursor: pointer;
-    transition: all var(--transition-fast);
-    white-space: nowrap;
-  }
-  
-  .market-button:hover {
-    background-color: #e5e5e5;
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-light);
-  }
-  
-  .market-button:active {
-    transform: translateY(0);
-  }
-  
-  .cart-button {
-    margin-right: 20px;
-    display: flex;
-    align-items: center;
-    transition: transform var(--transition-fast);
-  }
-  
-  .cart-button img {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);
-    transition: transform var(--transition-fast);
-  }
-  
-  .cart-button:hover img {
-    transform: scale(1.15);
-  }
-  
-  .account-button {
-    display: flex;
-    align-items: center;
-  }
-  
+
   .account-icon {
-    width: 30px;
-    height: 30px;
-    background-color: var(--card-bg);
-    border-radius: 50%;
-    transition: transform var(--transition-medium),
-      box-shadow var(--transition-medium);
+    width: 28px;
+    height: 28px;
   }
-  
-  .account-button:hover .account-icon {
-    transform: scale(1.1);
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+
+  #search-btn {
+    height: 36px;
   }
-  
-  @media (max-width: 1200px) {
-    .search-box {
-      max-width: 50%;
-    }
+
+  #search-btn .cart-button {
+    padding: 6px;
+    height: 36px;
   }
-  
-  @media (max-width: 992px) {
-    .app-header {
-      padding: 12px 60px;
-    }
-  
-    .search-box {
-      flex: 0 1 550px;
-      max-width: 60%;
-    }
-  
-    .nav-actions {
-      right: 15px;
-    }
-  
-    .market-button {
-      margin-right: 15px;
-    }
-  
-    .cart-button {
-      margin-right: 15px;
-    }
+
+  #search-btn img {
+    width: 18px;
+    height: 18px;
   }
-  
-  @media (max-width: 850px) {
-    .app-header {
-      padding: 12px 15px;
-    }
-  
-    .search-box {
-      max-width: 50%;
-    }
-  
-    .brand-logo {
-      left: 15px;
-    }
-  
-    .nav-actions {
-      right: 15px;
-    }
-  
-    .market-button {
-      margin-right: 10px;
-      padding: 8px 12px;
-    }
-  
-    .cart-button {
-      margin-right: 10px;
-    }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 10px;
   }
-  
-  @media (max-width: 768px) {
-    .app-header {
-      flex-direction: column;
-      padding: 12px 15px;
-      gap: 10px;
-    }
-  
-    .app-header::before {
-      content: "";
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .brand-logo {
-      position: static;
-      margin: 0;
-    }
-  
-    .nav-actions {
-      position: static;
-      margin: 0;
-      padding: 0;
-      width: auto;
-    }
-  
-    .app-header > .brand-logo,
-    .app-header > .nav-actions {
-      align-self: auto;
-      margin-bottom: 0;
-    }
-  
-    .app-header {
-      display: grid;
-      grid-template-rows: auto auto;
-      grid-template-columns: auto 1fr;
-    }
-  
-    .brand-logo {
-      grid-row: 1;
-      grid-column: 1;
-      justify-self: start;
-    }
-  
-    .nav-actions {
-      grid-row: 1;
-      grid-column: 2;
-      justify-self: end;
-    }
-  
-    .search-box {
-      grid-row: 2;
-      grid-column: 1 / span 2;
-      flex: 1 1 100%;
-      max-width: 100%;
-      margin: 10px 0 0 0;
-    }
-  
-    .market-button,
-    .cart-button {
-      margin-right: 15px;
-    }
-  
-    .account-button {
-      margin-right: 0;
-    }
+
+  .nav-actions {
+    justify-content: center;
   }
-  
-  @media (max-width: 576px) {
-    .search-filter {
-      padding: 8px 10px;
-      font-size: 13px;
-      min-width: 80px;
-      height: 36px;
-    }
-  
-    #search-bar {
-      padding: 8px 10px;
-      font-size: 13px;
-      height: 36px;
-    }
-  
-    .market-button {
-      padding: 6px 12px;
-      font-size: 13px;
-    }
-  
-    .cart-button img {
-      width: 20px;
-      height: 20px;
-    }
-  
-    .account-icon {
-      width: 28px;
-      height: 28px;
-    }
-  
-    #search-btn {
-      height: 36px;
-    }
-  
-    #search-btn .cart-button {
-      padding: 6px;
-      height: 36px;
-    }
-  
-    #search-btn img {
-      width: 18px;
-      height: 18px;
-    }
+
+  .search-box {
+    flex-direction: row;
+    border-radius: var(--border-radius-sm);
   }
-  
-  @media (max-width: 480px) {
-    .app-header {
-      padding: 10px;
-    }
-  
-    .nav-actions {
-      justify-content: center;
-    }
-  
-    .search-box {
-      flex-direction: row;
-      border-radius: var(--border-radius-sm);
-    }
-  
-    .search-filter,
-    #search-bar,
-    #search-btn {
-      border-radius: var(--border-radius-sm);
-    }
-  
-    .search-filter {
-      border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm);
-    }
-  
-    #search-btn {
-      border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
-    }
+
+  .search-filter,
+  #search-bar,
+  #search-btn {
+    border-radius: var(--border-radius-sm);
   }
-  
-  @media (max-width: 400px) {
-    .app-header {
-      padding: 10px;
-    }
-  
-    .nav-actions {
-      gap: 10px;
-    }
-  
-    .market-button {
-      margin-right: 8px;
-      padding: 6px 10px;
-      font-size: 12px;
-    }
-  
-    .cart-button {
-      margin-right: 8px;
-    }
-  
-    .cart-button img {
-      width: 18px;
-      height: 18px;
-    }
-  
-    .account-icon {
-      width: 26px;
-      height: 26px;
-    }
-  
-    .search-filter {
-      padding: 6px 8px;
-      font-size: 12px;
-      min-width: 70px;
-      height: 34px;
-    }
-  
-    #search-bar {
-      padding: 6px 8px;
-      font-size: 12px;
-      height: 34px;
-    }
-  
-    #search-btn {
-      height: 34px;
-    }
-  
-    #search-btn .cart-button {
-      height: 34px;
-      padding: 5px;
-    }
+
+  .search-filter {
+    border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm);
   }
-  
+
+  #search-btn {
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .app-header {
+    padding: 10px;
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .market-button {
+    margin-right: 8px;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .cart-button {
+    margin-right: 8px;
+  }
+
+  .cart-button img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .account-icon {
+    width: 26px;
+    height: 26px;
+  }
+
+  .search-filter {
+    padding: 6px 8px;
+    font-size: 12px;
+    min-width: 70px;
+    height: 34px;
+  }
+
+  #search-bar {
+    padding: 6px 8px;
+    font-size: 12px;
+    height: 34px;
+  }
+
+  #search-btn {
+    height: 34px;
+  }
+
+  #search-btn .cart-button {
+    height: 34px;
+    padding: 5px;
+  }
+}
