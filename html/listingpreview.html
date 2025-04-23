@@ -89,11 +89,13 @@
             </div>
 
             <div id='listings-container'>
-                <h2 class="other" id="listing-text"><button id="back-btn">←</button></h2>
-
+                <div class="listings-heading">
+                    <h1 id="listing-text"><button id="back-btn" onclick="location.href='market.html'">←</button></h1>
+                    <h1>Create Listing</h1>
+                </div>
                 <!-- Add New Listing Form -->
                 <form id="add-new-listing">
-                    <div class=".form-wrapper">
+                    <div class="form-wrapper">
                         <div class="mb-3 text-center">
                             <!-- Image Preview -->
                             <div class="mt-3">
@@ -101,8 +103,10 @@
                             </div>
 
                             <!-- Import Button -->
-                            <input type="file" id="imageInput" accept="image/*" hidden>
-                            <label for="imageInput" class="btn btn-secondary">Import Image</label>
+                            <div class="import-img-btn">
+                                <input type="file" id="imageInput" accept="image/*" hidden>
+                                <label for="imageInput" class="btn btn-secondary">Import Image</label>
+                            </div>
                         </div>
 
                         <div class="info-section">
@@ -115,11 +119,18 @@
                             <input class="form-control" type="text" placeholder="Input tags here...">
 
                             <!-- Price -->
-                            <br><label for="price">Price</label>
+                            <br><label id="price-text">Price</label>
                             <div class="input-group">
                                 <span class="input-group-text">$</span>
-                                <input type="number" id="price" class="form-control" placeholder="0.00" min="0"
-                                    step="0.01" required>
+                                <input 
+                                    type="number"
+                                    id="price"
+                                    class="form-control"
+                                    placeholder="0.00"
+                                    min="0"
+                                    step="0.01"
+                                    required
+                                >
                             </div>
 
                             <!-- Negotiables -->
@@ -129,25 +140,42 @@
                             <!-- Quantity Available -->
                             <br><label>Quantity Available</label>
                             <input class="form-control" type="number" min="1" value="1">
-
-                            <!-- Description -->
-                            <textarea class="form-control" type="text" placeholder="Description of Product..."
-                                id="descriptionInput" required></textarea>
-
-                            <!-- Delete and Submit buttons -->
-                            <div class="form-buttons">
-                                <button type="button" id="cancel-btn" class="btn btn-danger"
-                                    onclick="cancelListingForm()">Cancel</button>
-                                <button type="submit" class="btn btn-success" onclick="addListing()">Submit</button>
-                            </div>
                         </div>
                     </div>
+
+                    <div class="end-form">
+                        <!-- Description -->
+                        <div class="descriptionInput">
+                            <textarea class="form-control" placeholder="Description of Product..." required></textarea>
+                        </div>
+                
+                        <!-- Delete and Submit buttons -->
+                        <div class="form-buttons">
+                            <button type="button" id="cancel-btn" class="btn btn-danger" onclick="location.href='market.html'">Cancel</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                    </div>
+                    
                 </form>
 
             </div>
 
-            <div id='messages-container'>
+            <div id = 'messages-container'>
                 <h2 class="other" id="messages-text">Messages</h2>
+                <div class="message-card">
+                    <div class="profile-icon">
+                      <!-- Placeholder Circle Icon -->
+                      <svg viewBox="0 0 24 24" fill="#ccc" width="40" height="40">
+                        <circle cx="12" cy="8" r="4"/>
+                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="#ccc"/>
+                      </svg>
+                    </div>
+                    <div class="message-info">
+                      <h4 class="username">Alex Chen</h4>
+                      <p class="preview">Hi! I'm interested in buying your book.</p>
+                    </div>
+                  </div>
+                  
             </div>
 
         </div>

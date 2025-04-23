@@ -22,3 +22,20 @@ input.addEventListener('change', function () {
         preview.style.display = 'none';
     }
 });
+
+
+// Checking if all required inputs are filled out before submitting
+document.getElementById('add-new-listing').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default submission
+
+    const form = event.target;
+
+    if (form.checkValidity()) {
+        // All required fields are filled — redirect to market.html
+        window.location.href = 'market.html';
+    } else {
+        // Show validation error messages
+        form.reportValidity();
+    }
+});
+
